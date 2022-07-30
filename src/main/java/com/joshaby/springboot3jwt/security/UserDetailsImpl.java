@@ -1,6 +1,7 @@
 package com.joshaby.springboot3jwt.security;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.joshaby.springboot3jwt.entity.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -16,6 +17,13 @@ public class UserDetailsImpl implements UserDetails {
 
     @JsonIgnore
     private String password;
+
+    public UserDetailsImpl(User user) {
+        this.id = user.getId();
+        this.username = user.getUsername();
+        this.email = user.getEmail();
+        this.password = user.getPassword();
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
