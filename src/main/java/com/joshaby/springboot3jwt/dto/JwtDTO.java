@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Jwt {
+public class JwtDTO {
 
     private String token;
 
@@ -19,7 +19,7 @@ public class Jwt {
 
     private String email;
 
-    public Jwt(String token, Long id, String username, String email) {
+    public JwtDTO(String token, Long id, String username, String email) {
         this.token = token;
         this.id = id;
         this.username = username;

@@ -9,9 +9,11 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Login {
+public class SignupDTO {
 
     private String username;
+
+    private String email;
 
     private String password;
 }
