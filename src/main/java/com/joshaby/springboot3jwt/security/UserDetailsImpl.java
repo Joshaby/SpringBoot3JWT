@@ -2,11 +2,13 @@ package com.joshaby.springboot3jwt.security;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.joshaby.springboot3jwt.entity.User;
+import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 
+@Getter
 public class UserDetailsImpl implements UserDetails {
 
     private Long id;
