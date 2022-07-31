@@ -1,0 +1,127 @@
+_type: export
+__export_format: 4
+__export_date: 2022-07-31T02:21:21.501Z
+__export_source: insomnia.desktop.app:v2022.4.1
+resources:
+  - _id: req_5d3fd0c5c7ae490d9ec45c0f2e5d6d04
+    parentId: fld_70af0273cb5f49e99a1188e9b3a53ecd
+    modified: 1659234038069
+    created: 1659228865291
+    url: "{{ _.host }}{{ _.port }}/api/auth/signup"
+    name: /signup
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"username" : "joshaby",
+        	"name": "José Henrique",
+        	"email": "joshaby@gmail.com",
+        	"password": "123456"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_4a36e3f453f048ff9ca9bb12994be1f8
+    authentication: {}
+    metaSortKey: -1659228865291
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_70af0273cb5f49e99a1188e9b3a53ecd
+    parentId: wrk_9a4e332b53c442c594623760fdc03b71
+    modified: 1659228575348
+    created: 1659228575348
+    name: /api/auth - AuthResource
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1659228575348
+    _type: request_group
+  - _id: wrk_9a4e332b53c442c594623760fdc03b71
+    parentId: null
+    modified: 1659228521880
+    created: 1659228521880
+    name: my-spec.yaml
+    description: ""
+    scope: design
+    _type: workspace
+  - _id: req_802ae7df476b43a4a80248dbc764d2a2
+    parentId: fld_70af0273cb5f49e99a1188e9b3a53ecd
+    modified: 1659233639493
+    created: 1659228579317
+    url: "{{ _.host }}{{ _.port }}/api/auth/signin"
+    name: /signin
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"username": "joshaby",
+        	"password": "123456"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_a848e287baec42ea869d24ff6f808880
+    authentication: {}
+    metaSortKey: -1659228579317
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_9f570201190afa3e2ce854b799caefc84afafd12
+    parentId: wrk_9a4e332b53c442c594623760fdc03b71
+    modified: 1659228675626
+    created: 1659228521883
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: {}
+    color: null
+    isPrivate: false
+    metaSortKey: 1659228521883
+    _type: environment
+  - _id: jar_9f570201190afa3e2ce854b799caefc84afafd12
+    parentId: wrk_9a4e332b53c442c594623760fdc03b71
+    modified: 1659228521883
+    created: 1659228521883
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_741e321fe72d4e3c9bac19e4f245f6a2
+    parentId: wrk_9a4e332b53c442c594623760fdc03b71
+    modified: 1659228559517
+    created: 1659228521881
+    fileName: SpringBoot3JWT
+    contents: ""
+    contentType: yaml
+    _type: api_spec
+  - _id: env_bf8e805f389b4c12b3f254127ee3e4f9
+    parentId: env_9f570201190afa3e2ce854b799caefc84afafd12
+    modified: 1659229571884
+    created: 1659228656045
+    name: SpringBoot3JWT Env
+    data:
+      host: "http://localhost:"
+      port: "8080"
+    dataPropertyOrder:
+      "&":
+        - host
+        - port
+    color: null
+    isPrivate: false
+    metaSortKey: 1659228656045
+    _type: environment
