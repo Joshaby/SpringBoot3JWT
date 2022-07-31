@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/aut")
+@RequestMapping("/api/auth")
 public class AuthResource {
 
     @Autowired
@@ -54,7 +54,7 @@ public class AuthResource {
         if (userRepository.existsByEmail(signup.getEmail())) {
             return ResponseEntity.badRequest().body(new MessageDTO("Error: Email is already in use!"));
         }
-        User user = new User(signup.getUsername(), signup.getEmail(), encoder.encode(signup.getPassword()));
+        User user = new User(signup.getUsername(), signup.getName(), signup.getEmail(), encoder.encode(signup.getPassword()));
         userRepository.save(user);
         return ResponseEntity.ok(new MessageDTO("User registered sucessfully"));
     }
