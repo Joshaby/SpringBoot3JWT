@@ -1,11 +1,55 @@
 _type: export
 __export_format: 4
-__export_date: 2022-07-31T02:21:21.501Z
+__export_date: 2022-07-31T02:59:34.184Z
 __export_source: insomnia.desktop.app:v2022.4.1
 resources:
+  - _id: req_f03615d6a653465aabcaa9ecf1d8e725
+    parentId: fld_07e6363c56f94acc9f749985e13c46cf
+    modified: 1659236222273
+    created: 1659236075097
+    url: "{{ _.host }}{{ _.port }}/api/test/greeting"
+    name: /greeting
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_7fbc8906a4464f19a31240271b10142a
+        name: Authorization
+        value: Bearer
+          eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb3NoYWJ5IiwiaWF0IjoxNjU5MjM2MTc4LCJleHAiOjE2NTkzMTI0Nzh9.BruXkmiANOljP5Ws2Hh6X9ixTS0bbPjmp1jbWWEfR6ggl1nN_uEb80Ay0LzcruTENBsrPnfat3k9rqD2XAWdvg
+        description: ""
+    authentication: {}
+    metaSortKey: -1659236075097
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_07e6363c56f94acc9f749985e13c46cf
+    parentId: wrk_9a4e332b53c442c594623760fdc03b71
+    modified: 1659236073800
+    created: 1659236073800
+    name: /api/test - UserResource
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1659236073800
+    _type: request_group
+  - _id: wrk_9a4e332b53c442c594623760fdc03b71
+    parentId: null
+    modified: 1659228521880
+    created: 1659228521880
+    name: my-spec.yaml
+    description: ""
+    scope: design
+    _type: workspace
   - _id: req_5d3fd0c5c7ae490d9ec45c0f2e5d6d04
     parentId: fld_70af0273cb5f49e99a1188e9b3a53ecd
-    modified: 1659234038069
+    modified: 1659236171671
     created: 1659228865291
     url: "{{ _.host }}{{ _.port }}/api/auth/signup"
     name: /signup
@@ -45,17 +89,9 @@ resources:
     environmentPropertyOrder: null
     metaSortKey: -1659228575348
     _type: request_group
-  - _id: wrk_9a4e332b53c442c594623760fdc03b71
-    parentId: null
-    modified: 1659228521880
-    created: 1659228521880
-    name: my-spec.yaml
-    description: ""
-    scope: design
-    _type: workspace
   - _id: req_802ae7df476b43a4a80248dbc764d2a2
     parentId: fld_70af0273cb5f49e99a1188e9b3a53ecd
-    modified: 1659233639493
+    modified: 1659236176231
     created: 1659228579317
     url: "{{ _.host }}{{ _.port }}/api/auth/signin"
     name: /signin
